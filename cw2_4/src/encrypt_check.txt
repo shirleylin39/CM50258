@@ -1,0 +1,8 @@
+Don't forget to test your code!
+Otherwise you will be very disappointed.
+
+be due to reasons like a file not being found, a file not being accessible due to permission issues, or other issues related to reading or writing data.
+
+e: This is the variable name given to the caught exception object. It's a convention in Java to name the exception variable e, but you can name it anything you like (for example, ex, exception, or ioException). This variable is an instance of IOException and contains information about the error that occurred, such as a detailed error message and a stack trace.
+
+Within the catch bloc
