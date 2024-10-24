@@ -105,11 +105,11 @@ public class Main {
         list.print();
 
         // Order in ascending order again
-        list.orderDescending();
+        list.orderAscending();
         System.out.println("\nSize of the list: " + list.size());
 
         // Print the list in ascending order again
-        System.out.println("\nList in descending order after ordering again:");
+        System.out.println("\nList in ascending order after ordering again:");
         list.print();
 
         System.out.println("\nTrying to get nodes out of range after modification:");
@@ -124,11 +124,11 @@ public class Main {
         System.out.println("Last element: " + (list.getLast() == null ? "null" : list.getLast().getString())); // Should be 'banana'
         System.out.println("\nSize of the list: " + list.size());
 
-        // Order in ascending order again
+        // Order in descending order again
         list.orderDescending();
         System.out.println("\nSize of the list: " + list.size());
 
-        // Print the list in ascending order again
+        // Print the list in descending order again
         System.out.println("\nList in descending order after ordering again:");
         list.print();
 
@@ -158,20 +158,20 @@ public class Main {
         System.out.println("\nSize of the list: " + list.size());
 
         //Order in ascending order
-        //list.orderAscending();
-        //System.out.println("\nSize of the list: " + list.size());
+        list.orderAscending();
+        System.out.println("\nSize of the list: " + list.size());
 
         // Print the list in ascending order
-       // System.out.println("\nList in ascending order:");
-        //list.print();
+       System.out.println("\nList in ascending order:");
+       list.print();
 
         // Remove elements
         list.removeFirst();
-        System.out.println("\nRemove First" );
+        System.out.println("\nRemove First:" );
         list.print();
 
         list.removeLast();
-        System.out.println("\nRemove Last" );
+        System.out.println("\nRemove Last:" );
         list.print();
 
         list.remove("Kiwi");

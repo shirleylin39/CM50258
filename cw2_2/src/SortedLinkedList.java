@@ -1,5 +1,4 @@
 public class SortedLinkedList implements SortedList {
-
     private Node headNode;
     private Node tailNode;
     private int size;
@@ -26,8 +25,8 @@ public class SortedLinkedList implements SortedList {
         if (string == null || string.isEmpty()) {
             return;
         }
-
         Node currentNode = headNode;
+
         while (currentNode != null) {
             if (string.compareToIgnoreCase(currentNode.getString()) == 0) {
                 return;
@@ -40,7 +39,8 @@ public class SortedLinkedList implements SortedList {
         if (headNode == null) {
             headNode = newNode;
             tailNode = newNode;
-        } else {
+        }
+        else {
             currentNode = headNode;
             Node prev = null;
             while (currentNode != null &&
@@ -54,18 +54,19 @@ public class SortedLinkedList implements SortedList {
                 newNode.setNext(headNode);
                 headNode.setPrev(newNode);
                 headNode = newNode;
-            } else if (currentNode == null) {
+            }
+            else if (currentNode == null) {
                 prev.setNext(newNode);
                 newNode.setPrev(prev);
                 tailNode = newNode;
-            } else {
+            }
+            else {
                 prev.setNext(newNode);
                 newNode.setPrev(prev);
                 newNode.setNext(currentNode);
                 currentNode.setPrev(newNode);
             }
         }
-
         size++;
     }
 
@@ -74,7 +75,6 @@ public class SortedLinkedList implements SortedList {
         if (node == null || node.getString() == null || node.getString().isEmpty()) {
             return;
         }
-
         add(node.getString());
     }
 
@@ -98,7 +98,6 @@ public class SortedLinkedList implements SortedList {
         for (int i = 0; i < index; i++) {
             currentNode = currentNode.getNext();
         }
-
         return currentNode;
     }
 
@@ -133,7 +132,6 @@ public class SortedLinkedList implements SortedList {
         } else {
             tailNode = null;
         }
-
         size--;
         return true;
     }
@@ -147,11 +145,11 @@ public class SortedLinkedList implements SortedList {
         if (tailNode.getPrev() != null) {
             tailNode.getPrev().setNext(null);
             tailNode = tailNode.getPrev();
-        } else {
+        }
+        else {
             headNode = null;
             tailNode = null;
         }
-
         size--;
         return true;
     }
@@ -210,7 +208,6 @@ public class SortedLinkedList implements SortedList {
             }
             currentNode = currentNode.getNext();
         }
-
         return false;
     }
 
