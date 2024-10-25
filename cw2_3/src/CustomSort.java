@@ -1,6 +1,5 @@
-import java.util.List;
 import java.util.ArrayList;
-
+import java.util.List;
 
 public class CustomSort implements SortingInterface {
     private ArrayList<Double> values;
@@ -37,18 +36,15 @@ public class CustomSort implements SortingInterface {
 
     @Override
     public void sort() {
-        if (values != null) {  // Check if values is not null
+        if (values != null) {
             gaps = calculateGaps(values.size());
-
             for (int gap : gaps) {
                 for (int i = gap; i < values.size(); i++) {
                     double temp = values.get(i);
                     int j;
-
                     for (j = i; j >= gap && values.get(j - gap) > temp; j -= gap) {
                         values.set(j, values.get(j - gap));
                     }
-
                     values.set(j, temp);
                 }
             }
@@ -73,12 +69,13 @@ public class CustomSort implements SortingInterface {
 
         return result;
     }
+
+
     public List<Double> getValues() {
         if (values != null) {
-            // Create a defensive copy to prevent external modifications
             return new ArrayList<>(values);
         } else {
-            return new ArrayList<>(); // Return an empty list if values is null
+            return new ArrayList<>();
         }
     }
 
